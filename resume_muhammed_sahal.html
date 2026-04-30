@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammed Sahal – Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f2ec;
+      --ink: #1a1612;
+      --accent: #c0392b;
+      --muted: #6b6258;
+      --rule: #c8bfb5;
+      --card: #fff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 48px 16px;
+    }
+
+    .page {
+      background: var(--card);
+      max-width: 780px;
+      width: 100%;
+      padding: 60px 64px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+      border-top: 5px solid var(--accent);
+      animation: fadeUp 0.6s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding-bottom: 32px;
+      border-bottom: 1.5px solid var(--rule);
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    header .subtitle {
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .contact {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+    }
+
+    .contact span::before {
+      content: '·';
+      margin-right: 20px;
+    }
+    .contact span:first-child::before { content: ''; margin-right: 0; }
+
+    /* Section */
+    section { margin-bottom: 36px; }
+
+    .section-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* Summary */
+    .summary p {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: #3a3430;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      padding: 5px 14px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .skill-tag:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* Experience */
+    .entry { margin-bottom: 20px; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .entry-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+    }
+
+    .entry-date {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .entry-org {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .entry ul {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .entry li {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #3a3430;
+    }
+
+    /* Education */
+    .edu-degree {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+
+    .edu-school {
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .edu-date {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 600px) {
+      .page { padding: 36px 24px; }
+      header h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Muhammed Sahal</h1>
+    <div class="subtitle">Computer Science &amp; Machine Learning</div>
+    <div class="contact">
+      <span>Idukki, Kerala 685561</span>
+      <span>+91 8078508821</span>
+      <span>sahalmuhd4959@gmail.com</span>
+    </div>
+  </header>
+
+  <section class="summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      B.Tech Computer Science student with practical experience in Data Science and Machine Learning,
+      demonstrating a solid foundation in Python and modern frameworks. A strong passion for developing
+      AI-driven solutions drives a commitment to leveraging technology for innovative problem-solving.
+      Eager to contribute analytical skills and technical expertise to dynamic projects that deliver
+      impactful results. Proven ability to adapt and thrive in fast-paced environments, showcasing
+      dedication to continuous learning and professional growth.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">C</span>
+      <span class="skill-tag">C++</span>
+      <span class="skill-tag">Java</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">PyTorch</span>
+      <span class="skill-tag">Scikit-learn</span>
+      <span class="skill-tag">Pandas</span>
+      <span class="skill-tag">NumPy</span>
+      <span class="skill-tag">Matplotlib</span>
+      <span class="skill-tag">Seaborn</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Experience</div>
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title">Data Science &amp; Machine Learning Intern</div>
+        <div class="entry-date">June 2025</div>
+      </div>
+      <div class="entry-org">KELTRON Knowledge Centre — Kochi</div>
+      <ul>
+        <li>Developed a bone fracture detection system using EfficientNet-B0.</li>
+        <li>Worked on data preprocessing, model training, and validation.</li>
+        <li>Gained experience with Python, PyTorch, and data visualization tools.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Education</div>
+    <div class="edu-degree">Bachelor of Technology — Computer Science</div>
+    <div class="edu-school">Cochin University of Science and Technology (CUSAT)</div>
+    <div class="edu-date">Expected July 2027</div>
+  </section>
+
+</div>
+</body>
+</html>
