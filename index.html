@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhammed Sahal – Resume</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       background: #fff;
@@ -55,6 +62,7 @@
       border-top: 2px solid #000;
       margin-bottom: 6px;
     }
+
     .name-rule-thin {
       border: none;
       border-top: 1px solid #000;
@@ -104,15 +112,35 @@
       margin-bottom: 16px;
     }
 
-    /* Experience */
+    .skills .skill-line {
+      margin-bottom: 4px;
+    }
+
+    .skills .skill-label {
+      font-weight: bold;
+    }
+
+    /* Experience / Projects */
     .exp-title-row {
       font-size: 11pt;
       font-weight: bold;
       margin-bottom: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .exp-title-row .date {
+      font-weight: normal;
+      font-style: italic;
+      font-size: 10pt;
+      white-space: nowrap;
+      margin-left: 12px;
     }
 
     .exp-org {
       font-size: 11pt;
+      font-style: italic;
       margin-bottom: 6px;
     }
 
@@ -146,78 +174,149 @@
     .edu-school {
       font-size: 11pt;
     }
+
+    /* Links */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media print {
+      body {
+        font-size: 11pt;
+      }
+
+      .page {
+        padding: 24px 40px;
+      }
+    }
   </style>
 </head>
+
 <body>
-<div class="page">
+  <div class="page">
 
-  <hr class="top-rule"/>
+    <hr class="top-rule" />
 
-  <div class="name-block">
-    <h1>MUHAMMED SAHAL</h1>
-    <div class="profession">PROFESSION</div>
+    <div class="name-block">
+      <h1>MUHAMMED SAHAL</h1>
+      <div class="profession">COMPUTER SCIENCE STUDENT &mdash; DATA SCIENCE &amp; MACHINE LEARNING</div>
+    </div>
+
+    <hr class="name-rule" />
+    <hr class="name-rule-thin" />
+
+    <div class="contact">
+      Idukki, Kerala 685561
+      &nbsp;•&nbsp; <a href="tel:+918078508821">+91 8078508821</a>
+      &nbsp;•&nbsp; <a href="mailto:sahalmuhd4959@gmail.com">sahalmuhd4959@gmail.com</a>
+      &nbsp;•&nbsp; <a href="https://github.com/sahalz" target="_blank" rel="noopener">github.com/sahalz</a>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section-header">
+      <div class="line"></div>
+      <div class="label">PROFESSIONAL SUMMARY</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="summary">
+      B.Tech Computer Science student (graduating 2027) with hands-on experience in Data Science, Machine Learning,
+      and embedded systems. Skilled in Python and deep learning frameworks, with a track record of building
+      end-to-end projects spanning model development, full-stack web applications, and hardware prototyping. Seeking
+      opportunities to apply analytical and engineering skills to real-world problems while continuing to build
+      core CS fundamentals.
+    </div>
+
+    <!-- Skills -->
+    <div class="section-header">
+      <div class="line"></div>
+      <div class="label">SKILLS</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="skills">
+      <div class="skill-line"><span class="skill-label">Languages:</span> Python, C, C++, Java, SQL</div>
+      <div class="skill-line"><span class="skill-label">ML / Data:</span> PyTorch, Scikit-learn, Pandas, NumPy,
+        Matplotlib, Seaborn</div>
+      <div class="skill-line"><span class="skill-label">Tools &amp; Other:</span> Flask, React, Arduino (C/C++), Fusion
+        360, Git</div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section-header">
+      <div class="line"></div>
+      <div class="label">EXPERIENCE</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="exp-title-row">
+      <span>Data Science &amp; Machine Learning Intern</span>
+      <span class="date">June 2025</span>
+    </div>
+    <div class="exp-org">KELTRON Knowledge Centre &mdash; Kochi</div>
+    <ul class="exp-bullets">
+      <li>Built a bone fracture detection system using EfficientNet-B0 for medical image classification.</li>
+      <li>Preprocessed and augmented imaging data, and trained/validated the model using PyTorch, evaluating performance
+        with precision, recall, and F1-score.</li>
+      <li>Visualized model performance and data distributions using Matplotlib and Seaborn to guide iteration.</li>
+    </ul>
+
+    <div class="exp-title-row">
+      <span>3D Printing &amp; Arduino Basics Intern</span>
+      <span class="date">2024</span>
+    </div>
+    <div class="exp-org">CUSAT FabLab &mdash; Kochi</div>
+    <ul class="exp-bullets">
+      <li>Designed and 3D-printed functional prototypes (keychain, butterfly valve, Arduino enclosure) using Fusion 360
+        for CAD modeling and Ultimaker Cura for slicing.</li>
+      <li>Programmed Arduino Uno/Nano microcontrollers in C/C++ to interface with ultrasonic (HC-SR04) and IR sensors
+        for real-time distance and motion detection.</li>
+      <li>Built and tested circuits on breadboards, applying core electronics concepts across multiple hardware
+        projects.</li>
+    </ul>
+
+    <!-- Projects -->
+    <div class="section-header">
+      <div class="line"></div>
+      <div class="label">PROJECTS</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="exp-title-row">
+      <span>ProblySUS &mdash; URL Scam Detection Web App</span>
+      <span class="date">Group Project</span>
+    </div>
+    <div class="exp-org">Python, Flask, React, WHOIS, SSL Verification &nbsp;|&nbsp; <a
+        href="https://github.com/sahalz/ProblySUS" target="_blank" rel="noopener">github.com/sahalz/ProblySUS</a></div>
+    <ul class="exp-bullets">
+      <li>Built a full-stack web app that analyzes URLs in real time and assigns a 0&ndash;100 fraud risk score,
+        classifying sites as Safe, Suspicious, or Fraudulent.</li>
+      <li>Implemented multi-layered risk checks including blacklist verification, WHOIS domain-age analysis, SSL/HTTPS
+        validation, and phishing pattern recognition.</li>
+      <li>Optimized performance with a Fast Mode (reducing scan time from ~8&ndash;12s to ~3&ndash;5s), 24-hour WHOIS
+        caching, and concurrent execution of independent checks.</li>
+      <li>Developed the backend with Flask and Python, integrated with a React (Vite) frontend via Axios.</li>
+    </ul>
+
+    <!-- Education -->
+    <div class="section-header">
+      <div class="line"></div>
+      <div class="label">EDUCATION</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="exp-title-row">
+      <span class="edu-degree">Bachelor of Technology: Computer Science</span>
+      <span class="date">Expected 07/2027</span>
+    </div>
+    <div class="edu-school">Cochin University of Science and Technology (CUSAT)</div>
+
   </div>
-
-  <hr class="name-rule"/>
-  <hr class="name-rule-thin"/>
-
-  <div class="contact">
-    Idukki, Kerala 685561 &nbsp;•&nbsp; +918078508821 &nbsp;•&nbsp; sahalmuhd4959@gmail.com
-  </div>
-
-  <!-- Professional Summary -->
-  <div class="section-header">
-    <div class="line"></div>
-    <div class="label">PROFESSIONAL SUMMARY</div>
-    <div class="line"></div>
-  </div>
-
-  <div class="summary">
-    B.Tech Computer Science student with practical experience in Data Science and Machine Learning,
-    demonstrating a solid foundation in Python and modern &nbsp;&nbsp;&nbsp; frameworks. A strong passion for developing
-    AI-driven solutions drives a commitment to leveraging technology for innovative problem-solving. Eager
-    to contribute analytical skills and technical expertise to dynamic projects that deliver impactful results.
-    Proven ability to adapt and thrive in fast-paced environments, showcasing dedication to continuous
-    learning and professional growth.
-  </div>
-
-  <!-- Skills -->
-  <div class="section-header">
-    <div class="line"></div>
-    <div class="label">SKILLS</div>
-    <div class="line"></div>
-  </div>
-
-  <div class="skills">
-    Python, C, C++, Java, SQL, PyTorch, Scikit-learn, Pandas,<br/>
-    NumPy, Matplotlib, Seaborn
-  </div>
-
-  <!-- Experience -->
-  <div class="section-header">
-    <div class="line"></div>
-    <div class="label">EXPERIENCE</div>
-    <div class="line"></div>
-  </div>
-
-  <div class="exp-title-row">Data Science &amp; Machine Learning Intern, June-2025</div>
-  <div class="exp-org">KELTRON Knowledge Centre - Kochi</div>
-  <ul class="exp-bullets">
-    <li>Developed a bone fracture detection system using EfficientNet-B0.</li>
-    <li>Worked on data preprocessing, model training, and validation.</li>
-    <li>Gained experience with Python, PyTorch, and data visualization tools.</li>
-  </ul>
-
-  <!-- Education -->
-  <div class="section-header">
-    <div class="line"></div>
-    <div class="label">EDUCATION</div>
-    <div class="line"></div>
-  </div>
-
-  <div class="edu-degree">Bachelor of Technology: Computer Science, Expected in 07/2027</div>
-  <div class="edu-school">Cochin University of Science and Technology (CUSAT)</div>
-
-</div>
 </body>
+
 </html>
